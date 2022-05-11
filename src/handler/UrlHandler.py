@@ -8,3 +8,6 @@ class UrlHandler:
             result: dict = await HttpClientAdapter().make_request_by_url(url)
             result_list.append(result)
         return result_list
+
+    async def save_response_to_db(self, model_list) -> str:
+        return ""

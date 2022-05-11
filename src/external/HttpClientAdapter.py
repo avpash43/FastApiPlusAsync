@@ -6,6 +6,6 @@ class HttpClientAdapter:
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.get(url) as response:
-                    return {"url": url, "status_code": response.status, "content-type": response.content_type}
+                    return {"url": url, "status": response.status, "content_type": response.content_type}
         except OSError:
             print(f"{url} url is not valid")
