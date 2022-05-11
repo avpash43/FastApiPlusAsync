@@ -1,9 +1,9 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
-from src.api import MainApiRouter
+from src.api import main_api_router
 
 app = FastAPI()
-app.include_router(MainApiRouter.router)
+app.include_router(main_api_router.router)
 
 
 @app.exception_handler(Exception)

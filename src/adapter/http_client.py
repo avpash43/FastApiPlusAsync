@@ -1,7 +1,7 @@
 import aiohttp
 
 
-class HttpClientAdapter:
+class HttpClient:
     async def make_request_by_url(self, url: str) -> dict:
         try:
             async with aiohttp.ClientSession() as session:

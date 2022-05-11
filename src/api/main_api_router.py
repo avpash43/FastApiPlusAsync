@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from src.handler.UrlHandler import UrlHandler
-from src.model.UrlModel import UrlModel
+from src.handler.url_handler import UrlHandler
+from src.model.url_model import UrlModel
 
 router = APIRouter(
     prefix="/v1/url",
