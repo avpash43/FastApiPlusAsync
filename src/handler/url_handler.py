@@ -24,3 +24,6 @@ class UrlHandler:
 
     async def delete_url_response_by_id(self, url_id: int) -> typing.Any:
         return await UrlRepository().delete_url_response_by_id(url_id)
+
+    async def fill_agg_table(self) -> typing.Any:
+        return await UrlRepository().fill_agg_table()

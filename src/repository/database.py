@@ -16,6 +16,13 @@ url_info = sqlalchemy.Table(
     sqlalchemy.Column("content_type", sqlalchemy.String),
 )
 
+url_info_agg = sqlalchemy.Table(
+    "url_info_agg",
+    metadata,
+    sqlalchemy.Column("status", sqlalchemy.Integer),
+    sqlalchemy.Column("count", sqlalchemy.Integer),
+)
+
 engine = sqlalchemy.create_engine(
     DATABASE_URL, connect_args={"check_same_thread": False}
 )

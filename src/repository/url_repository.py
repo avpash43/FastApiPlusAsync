@@ -15,3 +15,10 @@ class UrlRepository:
     async def delete_url_response_by_id(self, url_id: int) -> typing.Any:
         query = url_info.delete().where(url_info.c.id == url_id)
         return await database.execute(query)
+
+    async def fill_agg_table(self):
+        query = "INSERT INTO url_info_agg " \
+                "SELECT count(url_info.status) as count, url_info.status as status " \
+                "FROM url_info " \
+                "GROUP BY status"
+        return await database.execute(query)

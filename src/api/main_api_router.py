@@ -29,3 +29,8 @@ async def get_all_url_responses():
 @router.delete("/delete_url_response_by_id/{url_id}", response_model=typing.Any)
 async def get_all_url_responses(url_id: int):
     return await UrlHandler().delete_url_response_by_id(url_id)
+
+
+@router.get("/fill_agg_table", response_model=typing.Any)
+async def get_all_url_responses():
+    return await UrlHandler().fill_agg_table()
